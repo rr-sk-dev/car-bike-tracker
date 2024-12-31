@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car/Bike Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="map"></div>
+      <div id="toolbar">
+        <div id="speed-display">Speed: <span id="speed">0</span> km/h</div>
+        <button id="generate-qr">Generate QR Code</button>
+      </div>
+      <div id="qr-container" style="display: none">
+        <h3>Scan to Open Current Location</h3>
+        <canvas id="qr-code"></canvas>
+        <button id="close-qr">Close</button>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
