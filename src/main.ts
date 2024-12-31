@@ -6,7 +6,7 @@ import QRCode from 'qrcode';
 
 const map = L.map('map').setView([0, 0], 15);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
+  // maxZoom: 19,
 }).addTo(map);
 
 const marker = L.marker([0, 0]).addTo(map);
@@ -33,7 +33,7 @@ if (navigator.geolocation) {
       currentLng = longitude;
 
       // Update map and marker
-      map.setView([latitude, longitude], 15);
+      map.setView([latitude, longitude]);
       marker.setLatLng([latitude, longitude]);
 
       // Update speed
